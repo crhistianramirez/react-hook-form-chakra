@@ -1,0 +1,49 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "src/components"
+    ],
+    "compilerOptions": {
+        "declaration": true,
+        "outDir": "dist"
+    },
+    // Configuration specific for typedoc (generates documentation based on types)
+    "typedocOptions": {
+        "entryPoints": [
+            "src/components/index.ts"
+        ],
+        "out": "docs",
+        "readme": "none",
+        "excludeInternal": true,
+        "excludeNotDocumented": true,
+        "visibilityFilters": {
+            "protected": false,
+            "private": false,
+            "inherited": false,
+            "external": true,
+            "@alpha": false,
+            "@beta": false
+        },
+        "excludeNotDocumentedKinds": [
+            "Module",
+            "Namespace",
+            "Enum",
+            // "EnumMember", // Not enabled by default
+            "Variable",
+            "Function",
+            "Class",
+            // "Interface",
+            "Constructor",
+            "Property",
+            "Method",
+            "CallSignature",
+            "IndexSignature",
+            "ConstructorSignature",
+            "Accessor",
+            "GetSignature",
+            "SetSignature",
+            // "TypeAlias",
+            "Reference",
+        ]
+    }
+}

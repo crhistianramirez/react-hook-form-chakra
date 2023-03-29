@@ -1,0 +1,61 @@
+{
+  "name": "react-hook-form-chakra",
+  "description": "chakra ui bindings for react-hook-form",
+  "author": "Crhistian Ramirez",
+  "version": "1.0.0-alpha.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "chakra",
+    "chakra-ui",
+    "react-hook-form",
+    "bindings",
+    "react",
+    "form validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crhistianramirez/react-hook-form-chakra"
+  },
+  "bugs": "https://github.com/crhistianramirez/react-hook-form-chakra/issues",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs": "typedoc --tsconfig tsconfig.lib.json"
+  },
+  "devDependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.4",
+    "@hookform/resolvers": "^3.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.15.10",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.5.0",
+    "typedoc": "^0.23.28",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "yup": "^1.0.2"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": "^2",
+    "react": ">=17",
+    "react-hook-form": "^7"
+  }
+}
