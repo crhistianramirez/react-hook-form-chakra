@@ -8,9 +8,7 @@
 Because setting up low level bindings is boring and tedious, and keeps you away from actually building solutions. This library takes care of most of the grunt work and doesn't try to  abstract away the underlying frameworks but rather embraces their composable architecture by leveraging [inversion of control](https://kentcdodds.com/blog/inversion-of-control#compound-components) and [composable components](https://kentcdodds.com/blog/inversion-of-control). 
 
 ## 🔥 Demo
-<!-- TODO: add link to code sandbox -->
-- [Demo with FormProvider]() (simpler but less performant, see [section below](#form-provider) for more info)
-- [Demo without FormProvider]()
+[Demo on CodeSandbox](https://codesandbox.io/p/sandbox/sharp-saha-0yl36k?selection=%5B%7B%22endColumn%22%3A21%2C%22endLineNumber%22%3A57%2C%22startColumn%22%3A1%2C%22startLineNumber%22%3A57%7D%5D&file=%2Fsrc%2FFormWithProvider.tsx) includes a demo with form provider (simpler but less performant, see [section below](#form-provider)) as well as usage without FormProvider (requires extra parameter [control](https://react-hook-form.com/api/useform/control/))
 
 ## ⚙️ Installation
 
