@@ -44,7 +44,8 @@ export const NumberInputControl: FC<NumberInputControlProps> = (props: NumberInp
     formState: { isSubmitting, errors }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: numberInputProps?.defaultValue || ''
   })
   const error = get(errors, name, "")
   const { ref, ...restField } = field;

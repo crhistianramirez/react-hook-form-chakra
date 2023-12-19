@@ -18,7 +18,8 @@ export const SwitchControl: FC<SwitchControlProps> = (props: SwitchControlProps)
     formState: { isSubmitting, errors }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.switchProps?.defaultChecked || false
   })
   const error = get(errors, name, "")
 

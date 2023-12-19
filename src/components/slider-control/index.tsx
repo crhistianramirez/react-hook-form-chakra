@@ -35,7 +35,8 @@ export const SliderControl: FC<SliderControlProps> = (props: SliderControlProps)
     formState: { isSubmitting }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.sliderProps?.defaultValue || ''
   })
 
   return (

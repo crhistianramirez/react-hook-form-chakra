@@ -41,7 +41,8 @@ export const InputControl: FC<InputControlProps> = (props: InputControlProps) =>
     formState: { isSubmitting }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: inputProps?.defaultValue || ''
   })
   return (
     <FormControl name={name} control={control} label={label} {...rest}>

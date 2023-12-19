@@ -17,7 +17,8 @@ export const TextareaControl: FC<TextareaControlProps> = (props: TextareaControl
     formState: { isSubmitting }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.textareaProps?.defaultValue || ''
   })
 
   return (

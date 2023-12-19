@@ -17,7 +17,7 @@ export const CheckboxSingleControl: FC<CheckboxSingleProps> = (props: CheckboxSi
     field,
     fieldState: { isTouched },
     formState: { errors, isSubmitting }
-  } = useController({ name, control })
+  } = useController({ name, control, defaultValue: props.checkBoxProps?.defaultChecked || false })
   const error = get(errors, name, "")
 
   const isChecked = field.value

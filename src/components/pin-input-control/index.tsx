@@ -27,7 +27,8 @@ export const PinInputControl: FC<PinInputControlProps> = (props: PinInputControl
     formState: { isSubmitting, }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.pinInputProps?.defaultValue || ''
   })
 
   const renderedPinInputFields = Array(pinAmount)

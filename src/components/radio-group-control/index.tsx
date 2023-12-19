@@ -27,7 +27,8 @@ export const RadioGroupControl: FC<RadioGroupControlProps> = (props: RadioGroupC
     formState: { isSubmitting }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.radioGroupProps?.defaultValue || '' 
   })
 
   return (

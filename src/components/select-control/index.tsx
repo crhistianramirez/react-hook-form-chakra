@@ -22,7 +22,8 @@ export const SelectControl: FC<SelectControlProps> = (props: SelectControlProps)
     formState: { isSubmitting }
   } = useController({
     name,
-    control
+    control,
+    defaultValue: props.selectProps?.defaultValue || ''
   })
 
   return (

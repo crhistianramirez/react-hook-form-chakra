@@ -24,7 +24,8 @@ export const CheckboxContainer: FC<CheckboxContainerProps> = (props: CheckboxCon
   const { name, label, control, children, stackProps, ...rest } = props
   const { field } = useController({
     control,
-    name
+    name,
+    defaultValue: props.defaultValue || []
   });
   const [value, setValue] = useState(field.value || []);
 
