@@ -2,7 +2,7 @@
   "name": "react-hook-form-chakra",
   "description": "chakra ui bindings for react-hook-form",
   "author": "Crhistian Ramirez",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
