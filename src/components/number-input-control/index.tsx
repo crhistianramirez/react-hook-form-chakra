@@ -58,6 +58,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = (props: NumberInp
           isInvalid={!!error && isTouched}
           isDisabled={isSubmitting}
           {...numberInputProps}
+          value={field.value ?? ""}
         >
           <NumberInputField name={name} ref={ref} />
           {showStepper && (

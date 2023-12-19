@@ -22,7 +22,7 @@ export const TextareaControl: FC<TextareaControlProps> = (props: TextareaControl
 
   return (
     <FormControl name={name} control={control} {...rest}>
-      <Textarea {...field} id={name} isDisabled={isSubmitting} {...textareaProps} />
+      <Textarea {...field} id={name} isDisabled={isSubmitting} {...textareaProps} value={field.value ?? ""} />
     </FormControl>
   )
 }

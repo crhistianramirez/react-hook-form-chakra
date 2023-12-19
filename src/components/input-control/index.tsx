@@ -48,7 +48,7 @@ export const InputControl: FC<InputControlProps> = (props: InputControlProps) =>
       <InputGroup>
         {typeof leftAddon === 'string' ? <InputLeftAddon>{leftAddon}</InputLeftAddon> : leftAddon}
         {typeof leftElement === 'string' ? <InputLeftElement>{leftElement}</InputLeftElement> : leftElement}
-        <Input {...field} id={name} isDisabled={isSubmitting} {...inputProps} />
+        <Input {...field} id={name} isDisabled={isSubmitting} {...inputProps} value={field.value ?? ""} />
         {typeof rightElement === 'string' ? <InputRightElement>{rightElement}</InputRightElement> : rightElement}
         {typeof rightAddon === 'string' ? <InputRightAddon>{rightAddon}</InputRightAddon> : rightAddon}
       </InputGroup>
