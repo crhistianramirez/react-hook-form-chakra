@@ -69,8 +69,8 @@ const Form = () => {
                 With FormProvider
             </Heading>
             <Stack padding={0} width="100%" spacing={5} direction={{ base: 'column', lg: 'row' }}>
-                <InputControl name="firstName" label="First Name" control={control} />
-                <InputControl name="lastName" label="Last Name" control={control} />
+                <InputControl name="firstName" label="First Name" control={control} tooltipText="Please provide your legal first name as shown on your birth certificate" />
+                <InputControl name="lastName" label="Last Name" control={control} tooltipText="Please provide your legal last name as shown on your birth certificate" />
             </Stack>
             <Stack width="100%" spacing={5} direction={{ base: 'column', lg: 'row' }}>
                 <InputControl name="phoneNumber" label="Phone Number" control={control}
@@ -88,7 +88,7 @@ const Form = () => {
                 <CheckboxSingleControl name="willingToRelocate" control={control}>
                     Willing to relocate?
                 </CheckboxSingleControl>
-                {/* <SwitchControl name="previousExperience" label="Previous Experience?" control={control} /> */}
+                <SwitchControl name="previousExperience" label="Previous Experience?" control={control} />
             </Stack>
             <CheckboxContainer name="preferredShift" label="Preferred shift" control={control} helperText="Please select at least 2 shift you would be interested in applying for">
                 <CheckboxControl name="preferredShift" value="mornings">

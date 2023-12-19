@@ -71,8 +71,8 @@ const Form = () => {
                     With FormProvider
                 </Heading>
                 <Stack padding={0} width="100%" spacing={5} direction={{ base: 'column', lg: 'row' }}>
-                    <InputControl name="firstName" label="First Name" />
-                    <InputControl name="lastName" label="Last Name" />
+                    <InputControl name="firstName" label="First Name" tooltipText="Please provide your legal first name as shown on your birth certificate" />
+                    <InputControl name="lastName" label="Last Name" tooltipText="Please provide your legal last name as shown on your birth certificate" />
                 </Stack>
                 <Stack width="100%" spacing={5} direction={{ base: 'column', lg: 'row' }}>
                     <InputControl name="phoneNumber" label="Phone Number"

@@ -1,3 +1,4 @@
+import { InfoOutlineIcon } from "@chakra-ui/icons"
 import {
   FormControl as ChakraFormControl,
   FormControlProps,
@@ -6,7 +7,9 @@ import {
   FormHelperText,
   FormLabel,
   FormLabelProps,
-  TextProps
+  TextProps,
+  Tooltip,
+  TooltipProps,
 } from "@chakra-ui/react"
 import { FC, ReactNode } from "react"
 import { Control, useController, get } from "react-hook-form"
@@ -58,6 +61,16 @@ export interface BaseReactHookFormProps {
    * Chakra FormErrorMessageProps for error message
    */
   errorMessageProps?: FormErrorMessageProps
+
+  /**
+   * Text for Chakra Tooltip
+   */
+  tooltipText?: string
+
+  /**
+   * Chakra TooltipProps
+   */
+  tooltipProps?: TooltipProps
 }
 
 /**
@@ -69,7 +82,19 @@ export interface BaseProps extends ChakraFormControlProps, BaseReactHookFormProp
 }
 
 export const FormControl: FC<BaseProps> = (props: BaseProps) => {
-  const { children, name, control, label, labelProps, helperText, helperTextProps, errorMessageProps, ...rest } = props
+  const { 
+    children,
+    name,
+    control,
+    label,
+    labelProps,
+    helperText,
+    helperTextProps,
+    tooltipText,
+    tooltipProps,
+    errorMessageProps,
+    ...rest
+  } = props
 
   const {
     formState: { errors }
@@ -81,7 +106,17 @@ export const FormControl: FC<BaseProps> = (props: BaseProps) => {
     <ChakraFormControl isInvalid={hasError} {...rest}>
       {label && typeof label === "string" ? (
         <FormLabel htmlFor={name} {...labelProps}>
-          {label}
+          {label}{" "}
+          {tooltipText && (
+            <Tooltip
+              label={tooltipText}
+              placement="right"
+              aria-label={`Tooltip for form field ${name}`}
+              {...tooltipProps}
+            >
+              <InfoOutlineIcon fontSize=".9em" color="blackAlpha.600" />
+            </Tooltip>
+          )}
         </FormLabel>
       ) : (
         label
